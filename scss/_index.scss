@@ -1,0 +1,136 @@
+@use "base" as *;
+
+/* ALGEMENE LAYOUT */
+
+/* GALLERY */
+
+.index_newitems {
+  padding: $padding-md;
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-black;
+    .card {
+      width: 25%;
+      flex-grow: 1;
+    }
+  }
+}
+
+.newitems {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 40vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $color-black;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.image-bkg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
+  right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 0.3;
+
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.newitems-text {
+  position: relative;
+  top: 25px;
+  z-index: 10;
+  margin: 20px 0;
+  max-width: 700px;
+}
+.newitems-heading {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.newitems-socials {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newitems-socials li {
+  list-style: none;
+}
+.newitems-socials li a {
+  display: inline-block;
+  margin-right: $margin-xs;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.newitems-socials li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+
+
+
+/* About tekst */
+
+.home-transition {
+  width: 100%;
+  height: 50vh;
+  padding: $padding-md $padding-md;
+  //background: url("../assets/images/beschrijving_background.jp");
+  //background-position: center;
+  //background-size: cover;
+  @include flexlayout();
+  flex-direction: column;
+  justify-content: space-evenly;
+  .txt_body_xl {
+    max-width: 60ch;
+    text-align: center;
+  }
+}
+
+
+
+@media (min-width: $screen-xs) and (max-width: $screen-md) {
+  .index_newitems {
+    .cards-wrapper {
+      .card {
+        width: 100%;
+        flex-grow: 1;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+  .image-bkg {
+    object-fit: cover;
+  }
+}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  .index_newitems{
+    .cards-wrapper {
+      .card {
+        width: 50%;
+        flex-grow: 1;
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,1222 @@
+/* GLOBAL SETTINGS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Font-size (Uitgerekend door GPT) */
+/* Screen sizes */
+/* Kleuren */
+/* Achtergrond Kleuren */
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.bg-light {
+  background-color: rgb(243, 243, 243);
+}
+
+.bg-primary {
+  background-color: #01011A;
+}
+
+.bg-secondary {
+  background-color: #666;
+}
+
+.bg-darkest {
+  background-color: #000000;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.bg-transparant {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Text kleuren */
+.txt-white {
+  color: #FFFFFF;
+}
+
+.txt-light {
+  color: rgb(243, 243, 243);
+}
+
+.txt-primary {
+  color: #01011A;
+}
+
+.txt-secondary {
+  color: #666;
+}
+
+.txt-darkest {
+  color: #000000;
+}
+
+.txt-black {
+  color: #000000;
+}
+
+/* Gebruikte font */
+/* MARGIN en PADDING */
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-xs {
+  margin-top: 0.5rem;
+}
+
+.mt-sm {
+  margin-top: 1rem;
+}
+
+.mt-md {
+  margin-top: 2rem;
+}
+
+.mt-lg {
+  margin-top: 3rem;
+}
+
+.mt-xl {
+  margin-top: 5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-xs {
+  margin-bottom: 0.5rem;
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 2rem;
+}
+
+.mb-lg {
+  margin-bottom: 3rem;
+}
+
+.mb-xl {
+  margin-bottom: 5rem;
+}
+
+.ms-0 {
+  margin-top: 0;
+}
+
+.ms-xs {
+  margin-left: 0.5rem;
+}
+
+.ms-sm {
+  margin-left: 1rem;
+}
+
+.ms-md {
+  margin-left: 2rem;
+}
+
+.ms-lg {
+  margin-left: 3rem;
+}
+
+.ms-xl {
+  margin-left: 5rem;
+}
+
+.me-0 {
+  margin-right: 0;
+}
+
+.me-xs {
+  margin-right: 0.5rem;
+}
+
+.me-sm {
+  margin-right: 1rem;
+}
+
+.me-md {
+  margin-right: 2rem;
+}
+
+.me-lg {
+  margin-right: 3rem;
+}
+
+.me-xl {
+  margin-right: 5rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-xs {
+  padding: 0.5rem;
+}
+
+.p-sm {
+  padding: 1rem;
+}
+
+.p-md {
+  padding: 2rem;
+}
+
+.p-lg {
+  padding: 3rem;
+}
+
+.p-xl {
+  padding: 5rem;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pt-xs {
+  padding-top: 0.5rem;
+}
+
+.pt-sm {
+  padding-top: 1rem;
+}
+
+.pt-md {
+  padding-top: 2rem;
+}
+
+.pt-lg {
+  padding-top: 3rem;
+}
+
+.pt-xl {
+  padding-top: 5rem;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pb-xs {
+  padding-bottom: 0.5rem;
+}
+
+.pb-sm {
+  padding-bottom: 1rem;
+}
+
+.pb-md {
+  padding-bottom: 2rem;
+}
+
+.pb-lg {
+  padding-bottom: 3rem;
+}
+
+.pb-xl {
+  padding-bottom: 5rem;
+}
+
+/* Mixin */
+.card .card-overlay, .card .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Grid containers */
+.container-fluid {
+  width: 100%;
+  height: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Responsieve containers */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  backdrop-filter: blur(0.5rem);
+  background: linear-gradient(rgba(243, 243, 243, 0.01), rgba(243, 243, 243, 0.01));
+}
+.navbar .navbar-brand .brand-link {
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  color: rgb(243, 243, 243);
+  font-weight: 700;
+  font-size: 1.618rem;
+  transition: 1.2s;
+}
+.navbar .navbar-brand .brand-link:hover {
+  color: rgba(243, 243, 243, 0.9);
+  letter-spacing: 2px;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem {
+  list-style-type: none;
+  color: #01011A;
+  display: inline;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button {
+  text-decoration: none;
+  color: #000000;
+  background-color: rgb(243, 243, 243);
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid #000000;
+  border-radius: 999px;
+  transition: all 0.5s;
+  padding: 6px 12px;
+  margin-left: 2rem;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button:hover {
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .login-button .fa-user-circle {
+  margin-right: 0.5rem;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .navbar-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-left: 0.65rem;
+  padding-bottom: 6px;
+  transition: all 0.5s;
+}
+.navbar .navbar-links .navbar-list .navbar-listitem .navbar-link:hover {
+  font-weight: 500;
+  border-bottom: 2px solid rgb(243, 243, 243);
+}
+
+/* Byte */
+.brand-title {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.brand-subtitle {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+/* Algemene teksttypes */
+.txt-heading_xxl {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 6.854rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+
+.txt-heading_xl {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 4.236rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.25rem;
+}
+
+.txt-heading_lg {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 300;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+}
+
+.txt-heading_md {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 300;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+}
+
+.txt-subheader {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  margin-bottom: 1rem;
+}
+
+.txt-title_sm {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 200;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.2rem;
+}
+
+.txt-body_md {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+}
+
+.txt_body_lg {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+}
+
+.txt_body_xl {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  margin-bottom: 0.3rem;
+}
+
+.infotxt_sm {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin-bottom: 0.7rem;
+  list-style-type: none;
+}
+
+.infotxt_strong {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 0.7rem;
+  list-style-type: none;
+}
+
+/* KNOPPEN */
+.main-button {
+  width: 170px;
+  height: 45px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.main-button:hover {
+  background-color: rgb(243, 243, 243);
+  color: #000000;
+}
+
+.cta-button {
+  display: block;
+  width: 170px;
+  height: 45px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.cta-button:hover {
+  background-color: rgb(243, 243, 243);
+  color: #000000;
+}
+
+.heading-button {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(243, 243, 243);
+  outline: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.2s;
+  margin-top: 2rem;
+}
+.heading-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgb(243, 243, 243);
+  letter-spacing: 1.5px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card:hover .card-overlay {
+  left: 0;
+  transition: all 0.7s;
+  backdrop-filter: blur(2px);
+}
+.card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  padding: 4rem;
+  background-color: rgba(1, 1, 26, 0.4);
+  color: #FFFFFF;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+}
+.card .card-overlay .card-overlay-heading {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+}
+.card .card-overlay .card-overlay-paragraph {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.card .card-overlay .card-overlay-button {
+  display: block;
+  width: 150px;
+  padding: 10px 0;
+  color: #01011A;
+  text-decoration: none;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.card .card-overlay .card-overlay-button:hover {
+  color: rgb(243, 243, 243);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #FFFFFF;
+}
+.card .card-image {
+  object-fit: fill;
+  padding: 5px;
+}
+
+.gallery_header {
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+/* FOOTER */
+.footer {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .footer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer .footer-social-media .social-media {
+  display: flex;
+  width: 240px;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+.footer .footer-social-media .social-media .social-media-item {
+  list-style-type: none;
+}
+.footer .footer-social-media .social-media .social-media-item .social-media-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.footer .footer-social-media .social-media .social-media-item .social-media-link:hover {
+  color: rgb(243, 243, 243);
+  transition: all 0.7s;
+}
+.footer .footer-contact {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+/* ALGEMENE LAYOUT */
+/* GALLERY */
+.index_newitems {
+  padding: 2rem;
+}
+.index_newitems .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000000;
+}
+.index_newitems .cards-wrapper .card {
+  width: 25%;
+  flex-grow: 1;
+}
+
+.newitems {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 40vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.image-bkg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
+  right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 0.3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.newitems-text {
+  position: relative;
+  top: 25px;
+  z-index: 10;
+  margin: 20px 0;
+  max-width: 700px;
+}
+
+.newitems-heading {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.newitems-socials {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newitems-socials li {
+  list-style: none;
+}
+
+.newitems-socials li a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.newitems-socials li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+/* About tekst */
+.home-transition {
+  width: 100%;
+  height: 50vh;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.home-transition .txt_body_xl {
+  max-width: 60ch;
+  text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .index_newitems .cards-wrapper .card {
+    width: 100%;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+  }
+  .image-bkg {
+    object-fit: cover;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .index_newitems .cards-wrapper .card {
+    width: 50%;
+    flex-grow: 1;
+    aspect-ratio: 1/1;
+  }
+}
+.login-frame {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(1, 1, 26, 0.9)), url("../assets/images/darkbluebg.jpeg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form * {
+  outline: none;
+  border: none;
+}
+
+.login-form {
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.25rem;
+  backdrop-filter: blur(1.2rem);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 3rem 2rem;
+  transition: style ease 0.7s;
+}
+.login-form .login-title {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2.618rem;
+  color: rgb(243, 243, 243);
+  font-weight: 500;
+}
+.login-form .login-label {
+  display: block;
+  font-family: "Noto Sans", sans-serif;
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.login-form .login-input_txt {
+  display: block;
+  height: 3rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: rgb(243, 243, 243);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  transition-property: background-color;
+  transition-duration: 0.7s;
+}
+.login-form .login-input_txt:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.login-form .login-input_txt:focus {
+  border: 1px solid rgb(243, 243, 243);
+}
+.login-form ::placeholder {
+  font-family: "Noto Sans", sans-serif;
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+.login-form .form-button {
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 2rem;
+  width: 100%;
+  color: rgb(243, 243, 243);
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgb(243, 243, 243);
+  backdrop-filter: blur(6rem);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.login-form .form-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgb(243, 243, 243);
+}
+.login-form .form-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  color: rgb(243, 243, 243);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.login-form .form-link:hover {
+  font-style: italic;
+  border-bottom: 1px solid rgb(243, 243, 243);
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .login-form {
+    height: min-content;
+    width: 320px;
+  }
+}
+.products-wrapper {
+  display: flex;
+  height: 95vh;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.filter-menu {
+  width: 20%;
+  padding: 2rem;
+  background-color: #000000;
+  border: 1px solid rgba(243, 243, 243, 0.4);
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(208, 5, 5, 0.2);
+  position: sticky;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+.filter-menu .filter-title {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  margin-bottom: 3rem;
+}
+.filter-menu .filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.filter-menu .filter-list .filter-listitem {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.filter-menu .filter-list .filter-listitem .filter-toggle {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}
+.filter-menu .filter-list .filter-listitem .filter-toggle:hover {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.product-list {
+  width: 80%;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  overflow-y: scroll;
+}
+.product-list .product-card {
+  height: auto;
+  background-color: #01011a;
+  border: 1px solid rgba(243, 243, 243, 0.1);
+  padding-bottom: 0.5rem;
+  border-radius: 2px;
+  text-align: start;
+}
+.product-list .product-card:hover {
+  border: 1px solid rgba(243, 243, 243, 0.4);
+}
+.product-list .product-card img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+.product-list .product-card .card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.product-list .product-card .card-info .card-txt {
+  flex-direction: column;
+}
+.product-list .product-card .card-info .card-txt .product-name {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(243, 243, 243);
+  margin-top: 0.5rem;
+}
+.product-list .product-card .card-info .card-txt .product-price {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+}
+.product-list .product-card .card-info .details-button {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid #FFFFFF;
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.7s;
+}
+.product-list .product-card .card-info .details-button:hover {
+  color: rgb(243, 243, 243);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #FFFFFF;
+  letter-spacing: 2px;
+}
+
+.pagination {
+  align-self: end;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.pagination .pagination-item {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.pagination .pagination-item:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .products-wrapper {
+    flex-direction: column;
+  }
+  .products-wrapper .filter-menu {
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    padding: 2px;
+    border: none;
+    border-radius: 1px;
+    overflow: visible;
+  }
+  .products-wrapper .filter-menu .filter-title {
+    display: none;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(243, 243, 243);
+  }
+  .products-wrapper .filter-menu .filter-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .products-wrapper .filter-menu .filter-list .filter-listitem {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+  }
+  .products-wrapper .filter-menu .filter-list .filter-listitem .filter-toggle {
+    text-decoration: none;
+    color: rgb(243, 243, 243);
+  }
+  .products-wrapper .filter-menu .filter-list .filter-listitem .filter-toggle:hover {
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom: 1px solid white;
+  }
+  .product-list {
+    margin-top: 2rem;
+    padding: 0;
+    width: 100%;
+  }
+  .filter-listitem {
+    display: block;
+  }
+  .product-card {
+    flex: 1 1 100%;
+  }
+}
+.product-detail-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Linkerkolom met productafbeelding*/
+.product-image {
+  width: 40%;
+  position: relative;
+}
+
+.product-image img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+/* Rechter kolom met productinformatie */
+.product-info {
+  height: 100%;
+  max-height: 100vh;
+  width: 60%;
+  background-color: #000000;
+  color: rgb(243, 243, 243);
+  font-family: "Noto Sans", sans-serif;
+  padding: 0 2rem;
+}
+.product-info .info-heading {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+}
+.product-info .info-subheading {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.618rem;
+  font-weight: 300;
+  color: rgb(243, 243, 243);
+}
+.product-info .product-info-list {
+  text-decoration: none;
+}
+.product-info .infotxt_lg {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2.618rem;
+  font-weight: 700;
+  color: rgb(243, 243, 243);
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+}
+.product-info .fa-star {
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
+  margin-right: 1px;
+  border: none;
+}
+
+.cart-button {
+  display: inline-block;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(243, 243, 243);
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.7s;
+}
+.cart-button:hover {
+  color: rgb(243, 243, 243);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(243, 243, 243);
+}
+
+.tech-specs {
+  margin-top: 3rem;
+}
+.tech-specs .line {
+  width: 100%;
+  height: 1px;
+  background: #363636;
+}
+.tech-specs .specs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.tech-specs .specs-wrapper .specs-left, .tech-specs .specs-wrapper .specs-right {
+  width: 50%;
+}
+.tech-specs .specs-wrapper .product-info-list i {
+  width: 40px;
+  margin-right: 1.2rem;
+  color: rgb(243, 243, 243);
+}
+
+/* MEDIA QUERIES. */
+@media (min-width: 320px) and (max-width: 768px) {
+  .product-image {
+    text-align: center;
+  }
+  .product-info {
+    margin-top: 2rem;
+    width: 100%;
+    max-height: 100vh;
+  }
+  .product-detail-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .product-detail-page .product-image {
+    width: 100%;
+    position: relative;
+  }
+  .tech-specs .specs-wrapper {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .tech-specs .specs-wrapper .specs-left, .tech-specs .specs-wrapper .specs-right {
+    width: 100%;
+  }
+  .tech-specs .specs-wrapper .product-info-list i {
+    width: 40px;
+    margin-right: 0.8rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
